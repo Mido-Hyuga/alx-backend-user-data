@@ -46,14 +46,14 @@ def filter_request():
 
 @app.errorhandler(404)
 def not_found(error) -> str:
-    """ Not found handler
+    """ function Not found handler
     """
     return jsonify({"error": "Not found"}), 404
 
 
 @app.errorhandler(401)
 def unauthorized_request(error) -> str:
-    '''Unauthorized requests
+    '''Function Unauthorized requests
     '''
 
     return jsonify({
@@ -63,7 +63,7 @@ def unauthorized_request(error) -> str:
 
 @app.errorhandler(403)
 def forbidden_request(error) -> str:
-    '''Forbidden request
+    ''' Function Forbidden request
     '''
 
     return jsonify({
